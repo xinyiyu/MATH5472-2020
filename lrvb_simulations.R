@@ -512,7 +512,7 @@ exact_pdf_bi_over = function(x, alpha){
   s2 = Sig[2,2,]
   rho = Sig[1,2,]/sqrt(s1*s2)
   pdf = 1/(2*pi*sqrt(s1*s2*(1-rho^2)))*exp(-0.5/(1-rho^2)*((x[1]-m[,1])^2/s1+
-                                                             (x[2]-m[,2])^2/s2-2*rho*(x[1]-m[,1])*(x[2]-m[,2])/sqrt(s1*s2)))
+        (x[2]-m[,2])^2/s2-2*rho*(x[1]-m[,1])*(x[2]-m[,2])/sqrt(s1*s2)))
   res = sum(p*pdf)*exp(alpha*x[1])
   return(res)
 }
